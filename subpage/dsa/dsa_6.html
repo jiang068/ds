@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">	
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>实验6 旅行商问题</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="../../images/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Full Background Image -->
+  <div class="full-background" style="background-image: url('../../images/bg.jpg'); --bg-color: rgba(0, 0, 0, 0.4)"></div>
+  
+  <!-- Main Container -->
+  <div class="container">
+	<!-- Header -->
+	<header class="header">
+		实验6 旅行商问题
+	</header>
+	</section>
+	<h2 class="prefer_pdf"><a href="../dsa.html">回到上一页</a></h2>
+
+	<!-- 这里可以写点东西 -->
+    <div class="data">
+        <h3>实验时间：选做</h3>
+        <h3>实验目的</h3>
+        <h4>综合运用所学知识，尝试以不同的算法设计策略解决同一个问题，加深对算法设计的理解。</h4>
+        <h3>问题描述</h3>
+        <h4>旅行商问题是一个非常经典的算法设计问题。这里描述的是旅行商问题的一个基本的版本：有N座城市，两两之间均有道路连接，某个旅行商要将这些城市遍历一次，每个城市都访问且仅访问一次，最后要回到出发点；要求给出一种遍历顺序，使得旅行商经过的路径总长度最短。</h4>
+        <h4>显然，旅行商问题的数学模型是有N个顶点的无向完全网（因为边上有权值），旅行商问题的解则是其中N条边所组成的一个简单回路（因为遍历不能重复访问）。我们怎样求解旅行商问题？可能有这几种策略：</h4>
+        <h4>1. 穷举法。列出所有长度为N的简单回路，从其中找出路径总长度最短的。</h4>
+        <h4>2. 迭代法。先随机生成一个长度为N的简单回路，再通过迭代找更短的。</h4>
+        <h4>3. 递归法。假设N-1时的旅行商问题能解，如何递推求出N时的旅行商问题的解？</h4>
+        <h4>4. 贪心法。请自己设计。</h4>
+        <h4>5. 回溯法。请自己设计。</h4>
+        <h4>6. 分枝定界法。请自己设计。</h4>
+        <h4>还有其他策略吗？</h4>
+        <h3>实验内容</h3>
+        <h4>选做实验，助教不检查。完成实验后，请提交文档和源代码作为助教给分依据。</h4>
+        <h4>在文档中，需要为旅行商问题设计至少3种算法，并分析你设计的算法是否能够保证得到最优的结果，算法的时间、空间复杂度如何。</h4>
+        <h4>在源代码中，需要实现你设计的至少2种算法，随机生成测试数据，比较不同算法的输出结果和运行时间。</h4>
+        <h4>完成本实验的同学可获得实验加分。</h4>
+    </div>
+
+	<!-- 引入 code.js -->
+	<script src="../../scripts/code.js"></script>
+  <link href="../../css/prism.css" rel="stylesheet">
+  <script src="../../css/prism.min.js"></script>
+  <script src="../../css/prism-c.min.js"></script>
+
+	<!-- 这里是代码展示的地方 -->
+	<div class="data">
+		<h3>实验6 代码示例</h3>
+		<!-- 这个容器会被 code.js 动态填充 -->
+		<pre class="code-content" id="code-block-1"></pre>
+	</div>
+	<script>
+		// 将代码内容作为普通字符串存储
+		const codeContent = `我没写这个。`;
+		// 动态填充到页面中
+        document.getElementById('code-block-1').textContent = codeContent;
+	</script>
+
+	<!-- PDF放这里 
+	<div class="data">
+	  <h3>参考PDF</h3>
+	  <h4 class="prefer_pdf"><a href="../../data/7.pdf">【PDF下载点此】</a></h4>
+	</div>-->
+	
+  </div>
+
+  <footer>
+    <h1 style="font-size: 17px; margin: 1; padding: 0;">
+      <span id="times">Loading running time...</span> 
+    </h1>
+  </footer>
+    
+<!-- 时间脚本 -->
+<script src="../../scripts/timer.js"></script>
+</body>
+
+</html>

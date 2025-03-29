@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/* Body */
+html, body {
+	font-family: "等线", "仿宋", "黑体";
+	background-color: rgba(0, 0, 0, 0);
+    height: 100%; /* 确保页面高度为视口高度 */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.full-background {
+	background-image: url(''); /* 背景图片路径，HTML 中动态设置 */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+/* 这里是一个伪元素，用于在背景图片上添加颜色覆盖层 */
+.full-background::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--bg-color, rgba(0, 0, 0, 0.3));
+	z-index: -1;
+}
+/* Container */
+.container {
+	flex: 1; /* 让容器占据剩余空间 */
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #00000000;
+}
+/* About Section */
+.text_column {
+	width: 90%;
+	text-align: left;
+	font-weight: lighter;
+	line-height: 25px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #000000;
+}
+.gallery {
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	padding-bottom: 35px;
+	padding-top: 0px;
+	margin-top: -5px;
+	margin-bottom: 0px;
+}
+.thumbnail {
+	width: 23%;
+	text-align: center;
+	float: left;
+	margin-top: 35px;
+	padding-bottom: 20px;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding-top: 20px;
+	border-radius: 10px; /* 添加圆角 */
+	background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+	border-bottom: 4px solid #ffffff00;
+}
+.gallery .thumbnail h4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #e6e6e6;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 26px; /* 设置字体大小 */
+}
+.gallery .thumbnail h4:hover {
+	color: #eeb5ff; /* 鼠标悬停时的颜色 */
+}
+
+.gallery .thumbnail p {
+	margin: 0;
+	color: #e6e6e6;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.intro {
+	display: flex; /* 使用 flexbox 布局 */
+	flex-direction: column; /* 垂直排列内容 */
+	justify-content: center; /* 垂直居中 */
+	align-items: center; /* 水平居中 */
+	padding: 0px; /* 添加内边距 */
+	text-align: center; /* 确保文字居中 */
+	width: 100%; /* 占满父容器宽度 */
+	box-sizing: border-box; /* 包括内边距在宽度计算中 */
+}
+.column {
+	width: 100%;
+	text-align: center;
+	padding-top: 30px;
+	float: left;
+}
+.cards {
+	width: 100%;
+	height: auto;
+	max-width: 400px;
+	max-height: 200px;
+	opacity: 0.8;
+}
+
+.prefer_pdf a {
+	color: #95d3ff; /* 设置链接颜色 */
+}
+.prefer_pdf a:hover {
+	color: #eeb4ff; /* 设置鼠标悬停时的颜色 */
+}
+a {
+	text-decoration: none; /* 取消所有链接的下划线 */
+}
+
+.button {
+	width: 200px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	transition: all 0.3s linear;
+}
+
+footer {
+	width: 100%; /* 占满页面宽度 */
+	text-align: center; /* 居中对齐 */
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-shadow: 1px 1px 2px #000;
+}
+.profile {
+	width: 50%;
+}
+.gallery .thumbnail .tag {
+	color: #e6e6e6;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* 代码块样式 */
+.code-content {
+	background-color: #00000000; /* 设置背景颜色 */
+	padding: 0px; /* 设置内边距 */
+	overflow-x: auto; /* 添加水平滚动条以防止内容溢出 */
+	white-space: pre-wrap; /* 保留空格和换行符 */
+	font-size: 22px;
+	font-family: "heiti", "sans-serif"; /* 设置字体为等线或无衬线字体 */
+}
+
+pre, code {
+  tab-size: 2; /* 设置 Tab 的宽度为 2 个字符 */
+  -moz-tab-size: 2; /* 兼容 Firefox */
+	border-radius: 15px; /* 添加圆角 */
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-top: 13px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.text_column {
+	width: 100%;
+	text-align: justify;
+	padding: 0;
+	padding-left: 20px;
+}
+.intro .column p {
+	width: 80%;
+	margin-left: 0px;
+}
+
+.thumbnail {
+	width: 100%;
+}
+.column {
+	width: 100%;
+	margin-top: 0px;
+}
+.hero_header {
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 22px;
+	text-align: center;
+}
+}
+
+/* Small Tablets */
+@media (min-width: 321px)and (max-width: 767px) {
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-top: 13px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.text_column {
+	width: 100%;
+	text-align: left;
+	padding: 0;
+}
+.thumbnail {
+	width: 100%;
+}
+.column {
+	width: 100%;
+	margin-top: 0px;
+}
+.text_column {
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 90%;
+}
+.column {
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.profile {
+	width: 100%;
+}
+}
+
+/* Small Desktops */
+@media (min-width: 768px) and (max-width: 1096px) {
+.text_column {
+	width: 100%;
+}
+.thumbnail {
+	width: 48%;
+}
+.text_column {
+	width: 90%;
+	margin: 0;
+	padding: 20px;
+}
+}
+.prefer {
+	color: #e6e6e6; /* 字体颜色 */
+	font-size: 30px; /* 字体大小 */
+	text-align: center; /* 居中对齐 */
+	text-shadow: 2px 2px 2px #000;
+	margin-bottom: 40px; /* 底部外边距 */
+}
+
+.header {
+	color: #e6e6e6;
+	text-align: center;
+	font-size: 50px;
+	padding-top: 20px;
+	text-shadow: 2px 2px 4px #000;
+}
+
+.prefer_pdf {
+	color: #1cceff;
+	text-shadow: 0px 0px #6b7cff;
+	text-shadow: 1px 1px 1px #000;
+}
+
+h1 {
+	text-align: center;
+	color: #e6e6e6;
+	font-size: 20px;
+}
+h2 {
+	color: #000000;
+	text-align: center;
+}
+
+.data {
+    color: #e6e6e6;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00000000;
+    margin-top: 35px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 40px; /* 添加左侧内边距 */
+		padding-right: 40px; /* 添加左侧内边距 */
+    border-radius: 10px; /* 添加圆角 */
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+    border-bottom: 4px solid #ffffff00;
+}
+
+h3 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	text-align: left;
+}
+
+h4 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	text-align: left;
+	line-height: 1.5; /* 设置行间距为 1.8 倍字体大小 */
+	/*text-indent: 2em;  设置首行缩进为 2 个字符宽度 */
+}
+
+p {
+	text-indent: 3%;
+}
+
+h5 {  
+	font-style: italic;
+}
+.center {
+	text-align: center;
+}

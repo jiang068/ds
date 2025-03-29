@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">	
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>程序设计</title>
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="../images/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Full Background Image -->
+  <div class="full-background" style="background-image: url('../images/bg.jpg'); --bg-color: rgba(0, 0, 0, 0.4)"></div>
+  
+  <!-- Main Container -->
+  <div class="container">
+	<!-- Header -->
+	<header class="header">
+		程序设计
+	</header>
+	</section>
+	<h2 class="prefer_pdf"><a href="../index.html">回到首页</a></h2>
+
+	<!-- 这里可以写点东西 -->
+	<div class="data">
+		<h3>课程简介</h3>
+		<h4>仅供参考，请勿直接copy.</h4>
+	  </div>
+
+	<!-- 引入 code.js -->
+	<script src="../scripts/code.js"></script>
+
+	<!-- 这里是代码展示的地方 -->
+	<div class="data">
+		<h3>示例代码</h3>
+		<!-- 这个容器会被 code.js 动态填充 -->
+		<pre class="code-content" id="code-block"></pre>
+	</div>
+	<script>
+		// 将代码内容作为普通字符串存储
+		const codeContent = `
+#include<stdio>
+int main() {
+	printf("Hello, World!");
+	return 0;
+}`;
+		// 动态填充到页面中
+		document.getElementById('code-block').textContent = codeContent;
+	</script>
+
+	<!-- PDF放这里 
+	<div class="data">
+	  <h3>参考PDF</h3>
+	  <h4 class="prefer_pdf"><a href="../data/7.pdf">【PDF下载点此】</a></h4>
+	</div>-->
+	
+  </div>
+
+  <footer>
+    <h1 style="font-size: 17px; margin: 1; padding: 0;">
+      <span id="times">Loading running time...</span> 
+    </h1>
+  </footer>
+    
+<!-- 时间脚本 -->
+<script src="../scripts/timer.js"></script>
+</body>
+
+</html>

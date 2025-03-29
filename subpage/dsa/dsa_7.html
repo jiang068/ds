@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">	
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>实验5 排序算法的计算复杂度</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="../../images/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Full Background Image -->
+  <div class="full-background" style="background-image: url('../../images/bg.jpg'); --bg-color: rgba(0, 0, 0, 0.4)"></div>
+  
+  <!-- Main Container -->
+  <div class="container">
+	<!-- Header -->
+	<header class="header">
+		实验5 排序算法的计算复杂度
+	</header>
+	</section>
+	<h2 class="prefer_pdf"><a href="../dsa.html">回到上一页</a></h2>
+
+	<!-- 这里可以写点东西 -->
+    <div class="data">
+        <h3>实验时间：选做</h3>
+        <h3>实验目的</h3>
+        <h4>综合运用所学知识，为实际问题设计高效算法。</h4>
+        <h3>问题描述</h3>
+        <h4>给定一份通话记录文件records.txt，包含约10万用户一天共计约100万条通话记录。文件是纯文本格式，每行为一条记录，格式如下：</h4>
+        <h4>手机号码（11位）、呼叫类型（2位，00表示主叫，01表示被叫）、通话时长（4位，以秒为单位）、呼叫发生小区（4位）、换行符（2位，即'\r\n'）</h4>
+        <h4>例如，文件的第一行：13955191490010225JQHK</h4>
+        <h4>表示手机号码为13955191490的用户在JQHK小区被叫，时长为225秒。</h4>
+        <h4>计费规则如下：</h4>
+        <h4>1. 通话时长以分钟为单位计费，不足一分钟按一分钟计算。</h4>
+        <h4>2. 主叫每分钟0.40元（40分）、被叫每分钟0.20元（20分）。</h4>
+        <h4>请生成话费账单，输出一份文件，要求输出文件是纯文本格式，每行为一条记录，格式如下：</h4>
+        <h4>手机号码（11位）、总费用（8位，以分为单位）、换行符（2位，即'\r\n'）</h4>
+        <h4>如输出文件的第一行：1395519149000001240</h4>
+        <h4>表示手机号码为13955191490的用户费用是12.40元。</h4>
+        <h3>实验内容</h3>
+        <h4>选做实验，助教不检查。完成实验后，请提交文档和源代码作为助教给分依据。</h4>
+        <h4>请设计计算复杂度尽可能低的算法。</h4>
+        <h4>在文档中，需要描述你设计的算法。源代码需要对算法进行完整实现。</h4>
+        <h4>完成本实验的同学可获得实验加分。</h4>
+    </div>
+
+	<!-- 引入 code.js -->
+	<script src="../../scripts/code.js"></script>
+  <link href="../../css/prism.css" rel="stylesheet">
+  <script src="../../css/prism.min.js"></script>
+  <script src="../../css/prism-c.min.js"></script>
+
+	<!-- 这里是代码展示的地方 -->
+	<div class="data">
+		<h3>程序代码示例如下：</h3>
+		<!-- 这个容器会被 code.js 动态填充 -->
+		<pre class="code-content" id="code-block-1"></pre>
+	</div>
+	<script>
+		// 将代码内容作为普通字符串存储
+		const codeContent = `这个我也没写。`;
+		// 动态填充到页面中
+        document.getElementById('code-block-1').textContent = codeContent;
+	</script>
+
+	<!-- PDF放这里 
+	<div class="data">
+	  <h3>参考PDF</h3>
+	  <h4 class="prefer_pdf"><a href="../../data/7.pdf">【PDF下载点此】</a></h4>
+	</div>-->
+	
+  </div>
+
+  <footer>
+    <h1 style="font-size: 17px; margin: 1; padding: 0;">
+      <span id="times">Loading running time...</span> 
+    </h1>
+  </footer>
+    
+<!-- 时间脚本 -->
+<script src="../../scripts/timer.js"></script>
+</body>
+
+</html>
