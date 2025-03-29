@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">	
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>期末上机实验考试</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="../../images/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Full Background Image -->
+  <div class="full-background" style="background-image: url('../../images/bg.jpg'); --bg-color: rgba(0, 0, 0, 0.4)"></div>
+  
+  <!-- Main Container -->
+  <div class="container">
+	<!-- Header -->
+	<header class="header">
+		期末上机实验考试
+	</header>
+	</section>
+	<h2 class="prefer_pdf"><a href="../dsa.html">回到上一页</a></h2>
+
+	<!-- 这里可以写点东西 -->
+	<div class="data">
+		<h3>说明：</h3>
+		<h4>本次考试时间不超过100分钟，满分为100分，评分标准如下：</h4>
+		<h4>1. 算法原理正确，代码编译正确（编译时出现的警告若不影响功能则不扣分），执行结果正确，得60分</h4>
+		<h4>2. 书写规范，格式整齐，得20分</h4>
+		<h4>3. 交卷时间在60分钟内，得20分（超过60分钟的，每2分钟内扣1分，扣完为止，例如交卷时间>60且<=62分钟，得19分，以此类推）</h4>
+		<h4>答题完毕后，将本人所写的代码通过电子邮件发送给助教。邮件中写明本人学号、姓名，将代码作为附件。注意仅发送代码，不要附送其他文件，否则邮件可能会收不到。交卷时间以电子邮件系统显示的发送时间为准。</h4>
+		<h3>试题：</h3>
+		<h4>请补全下面的EnQueue、DeQueue、CreateExpression、CreateLayerOrderThread共四个函数，允许新增函数，不准删除或修改已有代码</h4>
+	</div>
+
+	<!-- 引入 code.js -->
+	<script src="../../scripts/code.js"></script>
+  <link href="../../css/prism.css" rel="stylesheet">
+  <script src="../../css/prism.min.js"></script>
+  <script src="../../css/prism-c.min.js"></script>
+
+	<!-- 这里是代码展示的地方 -->
+	<div class="data">
+		<h3>示例代码2222</h3>
+		<!-- 这个容器会被 code.js 动态填充 -->
+		<pre class="code-content" id="code-block-1"></pre>
+	</div>
+	<script>
+		// 将代码内容作为普通字符串存储
+		const codeContent = `
+#include <cstdio>
+#include <cstring>
+using namespace std;
+
+typedef char TElemType;
+typedef struct TriNode {
+    TElemType data;
+    TriNode *lchild;
+    TriNode *rchild;
+    TriNode *next;
+} *Expression;
+// 使用三叉链表存储表达式。结点中的data项存储运算符或运算数，除了+,-,*,/四个符号是运算符，其他符号如a,b,c都看作运算数。结点中的lchild和rchild分别表示二叉树中的左右子树，结点中的next表示层序遍历二叉树的后继结点。
+
+const int QueueSize = 8;
+typedef TriNode *QElemType;
+typedef struct {
+    QElemType *elem;
+    int front;
+    int rear;
+    bool empty;
+} CircleQueue;
+// 使用循环队列辅助构造三叉链表。队列中存放三叉链表的结点指针。队列中的元素存放在以elem为首地址的数组中，front指示队首元素的位置，rear指示队尾元素的下一个位置，empty表示队列是否为空。注意当rear == front时，队列可能为空，也可能为满，此时通过empty即可区分两种状态，因此队列中最多容纳QueueSize个元素。
+
+void InitQueue(CircleQueue &Q) {
+    // 构造一个空队列，存储空间大小为QueueSize
+    Q.elem = new QElemType[QueueSize];
+    Q.front = 0;
+    Q.rear = 0;
+    Q.empty = true;
+}
+
+void DestroyQueue(CircleQueue &Q) {
+    // 销毁一个队列
+    delete []Q.elem;
+}
+
+void EnQueue(CircleQueue &Q, QElemType p) {
+    // 入队，放置在队尾
+    // 程序中不需要考虑内存大小限制，可以假设内存足够
+}
+
+bool DeQueue(CircleQueue &Q, QElemType &p) {
+    // 出队，将队首元素通过引用参数p返回
+    // 当队列为空时函数返回false，否则返回true
+}
+
+void CreateExpression(Expression &E, char *&s) {
+    // 字符串s是表达式的前缀形式，写一个递归函数从字符串构造表达式二叉树
+    // 注意：在这个函数中，结点的next指针可以暂时不考虑
+}
+
+void CreateLayerOrderThread(Expression &E) {
+    // 对表达式二叉树进行层序遍历，从而正确设置三叉链表中所有结点的next指针
+    // 要求：最后一个结点的next指针应设为NULL
+}
+
+void LayerOrderTraverse(Expression E) {
+    // 对三叉链表通过next指针进行遍历，从而获得表达式二叉树的层序遍历序列
+    TriNode *p = E;
+    while (p) {
+        printf("%c", p->data);
+        p = p->next;
+    }
+    printf("\\n");
+}
+
+int main() {
+    char *str = new char[12];
+    strcpy(str, "-+a*b-cd/ef");
+    char *s = str;
+    Expression exp;
+    CreateExpression(exp, str);
+    delete []s;
+    CreateLayerOrderThread(exp);
+    LayerOrderTraverse(exp);
+    return 0;
+}`;
+		// 动态填充到页面中
+		document.getElementById('code-block-1').textContent = codeContent;
+	</script>
+
+	<!-- 链接放这里 -->
+	<div class="data">
+	  <h3>考试代码下载</h3>
+	  <h4 class="prefer_pdf"><a href="../../data/c2/test2024.cpp" download="test2024.cpp">test2024.cpp</a></h4>
+	</div>
+	
+  </div>
+
+  <footer>
+    <h1 style="font-size: 17px; margin: 1; padding: 0;">
+      <span id="times">Loading running time...</span> 
+    </h1>
+    <div style="text-align: center; margin-top: 10px;">
+      <a href="https://github.com/" target="_blank" style="text-decoration: none; color: inherit;">
+        <h1 style="display: inline; font-size: inherit; font-weight: inherit;">
+          <img src="../images/Logo.png" alt="GitHub Logo" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+          Powered by GitHub for cloud storage and service support
+        </h1>
+      </a>
+    </div>
+  </footer>
+    
+<!-- 时间脚本 -->
+<script src="../../scripts/timer.js"></script>
+</body>
+
+</html>
