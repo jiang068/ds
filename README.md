@@ -7,7 +7,7 @@
 
 # 入口在哪？  
 
-[Kyota的实验报告合集](jiang068.github.io/ds/)
+[Kyota的实验报告合集](https://jiang068.github.io/ds/)
 
 国内镜像站本来想做的，  
 但是有人说要打我服务器就没放了，  
