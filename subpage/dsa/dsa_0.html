@@ -52,12 +52,13 @@ int main() {
 }`;
 		// 动态填充到页面中
 		document.getElementById('code-block').textContent = codeContent;
+		//如果一页有多块代码需要更改'code-block'为其他不同值，对应43行的id="code-block"值和54行的textContent = codeContent的值也要进行相应更改
 	</script>
 
-	<!-- PDF放这里 
+	<!-- 下载链接放这里 
 	<div class="data">
 	  <h3>参考PDF</h3>
-	  <h4 class="prefer_pdf"><a href="../../data/7.pdf"  download="7.pdf">【PDF下载点此】</a></h4>
+	  <h4 class="prefer_pdf"><a href="../../data/7.pdf" download="7.pdf">【PDF下载点此】</a></h4>
 	</div>-->
 	
   </div>
