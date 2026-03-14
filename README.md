@@ -6,7 +6,7 @@
 
 ### 快速链接
 
-- [本站 github 地址](https://github.com/jiang068/lab_reports/)
+- [本站 github 仓库](https://github.com/jiang068/lab_reports/)
 - [Github.io 页面](https://jiang068.github.io/lab_reports/)
 - [cloudflare 加速镜像站](https://ds.fufu.blog/)
 
