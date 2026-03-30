@@ -1,3 +1,15 @@
+---
+title: "数字图像处理 作业3"
+slug: dip_3
+date: 2026-03-31
+draft: false
+categories: ["数字图像", "图像", "python"]
+tags: ["数字图像", "图像", "python"]
+params:
+  hidden: true
+---
+
+
 ### 第三次作业
 3.1 计算下图的 DFT, DCT, Hadamard 变换和Haar变换
 ![题图1](/data/数字图像处理/dip_hw3/hw3_t1.png)
