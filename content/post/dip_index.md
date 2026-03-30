@@ -1,7 +1,7 @@
 ---
 title: "数字图像处理"
 slug: dip_index
-date: 2026-03-14
+date: 2026-03-31
 draft: false
 categories: ["编程", "图像"]
 tags: ["数字图像", "图像", "python"]
@@ -16,3 +16,4 @@ tags: ["数字图像", "图像", "python"]
 ## 参考习题及代码
 
 - [第二次作业](/dip_2/)
+- [第三次作业](/dip_3/)
